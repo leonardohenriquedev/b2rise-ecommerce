@@ -1,27 +1,59 @@
-# B2riseEcommerce
+# 🚀 Frontend challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+Bem-vindo(a) ao desafio frontend!
 
-## Development server
+O objetivo deste desafio é avaliar suas habilidades de programação.
+Quando sua solução estiver pronta, basta responder o e-mail que recebeu com o link do seu repo no Github!
+Em seguida, enviaremos o feedback e as instruções dos próximos passos!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Caso tenha alguma dúvida, nós estamos disponíveis no email *recrutamento@b2rise.consulting*.
+Bom desafio!
 
-## Code scaffolding
+> ⚠️ **É importante que o seu repo seja público, caso contrário não iremos conseguir avaliar sua resposta. Se você preferir, pode criar um repositório privado com acesso para os usuários** `mlucascardoso` e `notelho`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# 🧠 Contexto
 
-## Build
+O desafio será implementar um e-commerce para venda de camisetas que deverá ter as seguintes funcionalidades:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [ ] Listagem dos produtos
+- [ ] Adicionar e remover produtos do carrinho
+- [ ] Finalizar compra
 
-## Running unit tests
+Caso você queira ir além:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [ ] Histórico de pedidos
+- [ ] Busca por nome do produto
 
-## Running end-to-end tests
+## 📋 Instruções
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Chegou a hora de colocar a mão na massa!
 
-## Further help
+- Siga [esse protótipo](https://www.figma.com/proto/SQHTonDPYDbpkxncjDfTbK/Frontend-challange)
+- Utilize HTML, CSS e Typescript
+- Utilize o framework Angular (>= v7)
+- Local storage para salvar o histórico de pedidos
+- Por favor, inclua no README as instruções de instalação do projeto
+- Sinta-se livre para incluir quaisquer observações
+- Consuma os dados dos produtos que estão no arquivo **api/products.json** (você pode criar um [JSON server](https://www.npmjs.com/package/json-server) ou mockar no código)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ✔️ Critérios de Avaliação
+
+Além dos requisitos levantados acima, iremos olhar para os seguintes critérios durante a correção do desafio:
+
+- UI/UX
+- Codificação
+- Componentização
+- Padrão de commits [Conventional](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## 😎 Seria legal se você utilizasse
+
+- Sass, Less
+- Boostrap, Bulma, Materialize
+- Arquitetura limpa
+- Princípios de clean code
+- Testes unitários
+- Testes e2e
+
+---
+
+_O desafio acima foi cuidadosamente construído para propósitos de avaliação apenas. Já possuímos uma ferramenta similar na nossa plataforma._
