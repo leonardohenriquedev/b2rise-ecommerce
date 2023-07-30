@@ -1,0 +1,13 @@
+input {
+  min-width: 500px;
+  width: 40vw;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  padding: 20px;
+  font-size: 22px;
+}
+
+::placeholder {
+  color: rgb(189, 189, 189);
+}
