@@ -1,0 +1,24 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.empty-cart-box {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+}
+
+.empty-cart-text {
+  font-size: 50px;
+}
+
+img {
+  width: 600px;
+}

@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-search',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: '<router-outlet></router-outlet>',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css'],
 })
-export class AppComponent {}
+export class SearchComponent {}
