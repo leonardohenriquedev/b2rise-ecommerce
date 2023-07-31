@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../Header/header.component';
+import { ProductService } from '../Services/products.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,5 +11,12 @@ import { HeaderComponent } from '../Header/header.component';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  title = 'b2rise-ecommerce';
+  // productService: ProductService = inject(ProductService);
+  // async getAllProducts() {
+  //   const products = await this.productService.getAllProducts();
+  //   console.log(products);
+  // }
+  // constructor() {
+  //   this.getAllProducts();
+  // }
 }
