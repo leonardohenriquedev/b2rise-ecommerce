@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,4 +9,10 @@ import { RouterModule } from '@angular/router';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
 })
-export class SearchComponent {}
+export class SearchComponent {
+  @Output() onChangeEvent = new EventEmitter<string>();
+
+  setInputValue(value: string) {
+    this.onChangeEvent.emit(value);
+  }
+}
