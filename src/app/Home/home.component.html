@@ -1,15 +1,17 @@
 <main>
   <section>
-    <img src="../../assets/logo.png" />
-    <app-search />
-    <div class="home-buttons">
-      <a routerLink="/cart">
-        <button class="secondary-bg-color">Carrinho</button>
-      </a>
+    <div class="home-box">
+      <img src="../../assets/logo.png" />
+      <app-search (onChangeEvent)="setSearchInputValue($event)" />
+      <div class="home-buttons">
+        <a routerLink="/cart">
+          <button class="secondary-bg-color">Carrinho</button>
+        </a>
 
-      <a routerLink="/search">
-        <button class="main-bg-color">Pesquisar</button>
-      </a>
+        <a routerLink="/products" [queryParams]="{ search: searchInputValue }">
+          <button class="main-bg-color">Pesquisar</button>
+        </a>
+      </div>
     </div>
   </section>
 </main>

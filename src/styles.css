@@ -10,8 +10,19 @@
 
 main {
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   background-color: #fafafa;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {

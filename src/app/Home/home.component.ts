@@ -10,4 +10,10 @@ import { SearchComponent } from '../Search/search.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  searchInputValue = '';
+
+  setSearchInputValue(value: string) {
+    this.searchInputValue = value;
+  }
+}

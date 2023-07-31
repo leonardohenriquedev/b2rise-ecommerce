@@ -1,1 +1,8 @@
-<input placeholder="Pequisar por produtos.." />
+<div class="search-box">
+  <input
+    placeholder="Pequisar por produtos.."
+    #searchInput
+    (input)="setInputValue(searchInput.value)"
+  />
+  <i class="bi bi-search"></i>
+</div>
