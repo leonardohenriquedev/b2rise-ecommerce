@@ -6,7 +6,7 @@ main {
   height: 100vh;
 }
 
-section {
+.home-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
