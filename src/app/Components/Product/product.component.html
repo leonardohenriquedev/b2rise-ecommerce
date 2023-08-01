@@ -4,7 +4,9 @@
     <img src="../../../assets/t-shirt-mockup.png" />
     <div class="product-info">
       <b class="product-title">{{ product.description }}</b>
-      <p class="product-price">R${{ product.price }}/1 UN</p>
+      <p class="product-price">
+        {{ currencyHelper.formatToBRL(product.price) }} / 1 und.
+      </p>
       <p class="product-description">
         {{ product.longDescription }}
       </p>
@@ -14,7 +16,7 @@
     <a>
       <i class="bi bi-heart fav-icon"></i>
     </a>
-    <a><button class="add-to-cart">+ Carrinho</button></a>
+    <a><button class="add-to-cart" (click)="addToCart()">+ Carrinho</button></a>
   </div>
 </div>
 <hr />

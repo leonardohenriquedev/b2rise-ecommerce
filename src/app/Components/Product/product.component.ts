@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Product } from 'src/app/Types/product.type';
+import { BaseComponent } from '../Base/base.component';
+import { State } from 'src/app/Services/state.service';
+import { Product } from 'src/app/Types';
+import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 
 @Component({
   selector: 'app-product',
@@ -10,6 +13,16 @@ import { Product } from 'src/app/Types/product.type';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
 })
-export class ProductComponent {
+export class ProductComponent extends BaseComponent {
   @Input() product!: Product;
+  state: State = inject(State);
+  currencyHelper: CurrencyHelper = inject(CurrencyHelper);
+
+  addToCart() {
+    this.state.addCartItem({ product: this.product, quantity: 1 });
+  }
+
+  constructor() {
+    super();
+  }
 }
