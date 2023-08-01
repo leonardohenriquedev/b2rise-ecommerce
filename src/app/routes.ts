@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './Home/home.component';
-import { CartComponent } from './Cart/cart.component';
-import { ProductsComponent } from './Products/products.component';
+import { CartComponent } from './Pages/Cart/cart.component';
+import { ProductsComponent } from './Pages/Products/products.component';
+import { HomeComponent } from './Pages/Home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'B2RISE - Ecommerce' },
