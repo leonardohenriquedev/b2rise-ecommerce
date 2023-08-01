@@ -1,0 +1,50 @@
+<main>
+  <app-header />
+  <section>
+    <div class="products-filters">
+      <div class="result-filter">
+        <b class="search-input" *ngIf="searchInput">"{{ searchInput }}"</b>
+        <p class="total-results">{{ products.length }} resultados</p>
+        <hr />
+      </div>
+
+      <div class="box-filter">
+        <b class="filter-title">Cor</b>
+        <div class="filter-options">
+          <a>Vermelho</a>
+          <a>Verde</a>
+          <a>Azul</a>
+        </div>
+      </div>
+
+      <div class="box-filter">
+        <b class="filter-title">Tamanho</b>
+        <div class="filter-options">
+          <a>GG</a>
+          <a>G</a>
+          <a>M</a>
+          <a>P</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="products-buttons">
+        <a><button class="select-all">Selecionar todos</button></a>
+        <a><button class="add-to-cart">Adicionar selecionados</button></a>
+      </div>
+
+      <div class="products-items">
+        <!-- <app-product [product]="products[0]" />
+        <app-product [product]="products[1]" />
+        <app-product [product]="products[2]" /> -->
+
+        <ol>
+          <li *ngFor="let product of products">
+            <app-product [product]="product" />
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
