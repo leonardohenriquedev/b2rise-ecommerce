@@ -2,7 +2,7 @@
   <section>
     <div class="home-box">
       <img src="../../assets/logo.png" />
-      <app-search (onChangeEvent)="setSearchInputValue($event)" />
+      <app-search (onSearch)="navigate()" />
       <div class="home-buttons">
         <a routerLink="/cart">
           <button class="secondary-bg-color">Carrinho</button>

@@ -2,13 +2,13 @@
   <a routerLink="/">
     <img src="../../assets/header-logo.png" />
   </a>
-  <app-search />
+  <app-search [updateOnlyEnter]="true" (onSearch)="navigate()" />
   <div class="header-icons">
-    <a>
+    <a [routerLink]="'/cart'">
       <i class="bi bi-cart-fill"></i>
     </a>
 
-    <a>
+    <a [routerLink]="'/historic'">
       <i class="bi bi-clock-history"></i>
     </a>
   </div>

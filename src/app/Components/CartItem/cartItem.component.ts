@@ -1,25 +1,29 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartItem, Product } from 'src/app/Types';
 import { BaseComponent } from '../Base/base.component';
 import { State } from 'src/app/Services/state.service';
-import { Product } from 'src/app/Types';
 import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 
 @Component({
-  selector: 'app-product',
+  selector: 'app-cart-item',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css'],
+  templateUrl: './cartItem.component.html',
+  styleUrls: ['./cartItem.component.css'],
 })
-export class ProductComponent extends BaseComponent {
-  @Input() product!: Product;
+export class CartItemComponent extends BaseComponent {
+  @Input() cartItem!: CartItem;
   state: State = inject(State);
   currencyHelper: CurrencyHelper = inject(CurrencyHelper);
 
-  addToCart() {
-    this.state.addCartItem({ product: this.product, quantity: 1 });
+  addToCart(cartItem: Product) {
+    this.state.addCartItem({ product: cartItem, quantity: 1 });
+  }
+
+  removeFromCart(id: number) {
+    this.state.removeCartItem(id);
   }
 
   constructor() {

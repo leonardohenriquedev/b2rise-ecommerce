@@ -1,0 +1,47 @@
+<div class="cart-item">
+  <img src="../../../assets/t-shirt-mockup.png" />
+
+  <div class="cart-item-info">
+    <b class="cart-item-title">{{ cartItem.product.description }}</b>
+    <p class="cart-item-price">
+      {{ currencyHelper.formatToBRL(cartItem.product.price) }} / 1 und.
+    </p>
+    <div class="cart-item-buttons">
+      <a><button class="delete">Excluir</button></a>
+      <a><button class="fav">Favoritar</button></a>
+    </div>
+    <p class="cart-item-description">
+      {{ cartItem.product.longDescription }}
+    </p>
+  </div>
+
+  <div class="cart-item-count">
+    <div class="item-counter-box">
+      <a
+        ><button
+          class="item-counter remove"
+          (click)="removeFromCart(cartItem.product.id)"
+        >
+          -
+        </button></a
+      >
+
+      <a>
+        <button class="item-counter quantity">{{ cartItem.quantity }}</button>
+      </a>
+
+      <a
+        ><button class="item-counter add" (click)="addToCart(cartItem.product)">
+          +
+        </button></a
+      >
+    </div>
+
+    <p>
+      {{
+        currencyHelper.formatToBRL(cartItem.product.price * cartItem.quantity)
+      }}
+    </p>
+  </div>
+</div>
+<hr />

@@ -1,9 +1,23 @@
 <main>
   <app-header />
   <section>
-    <div class="empty-cart-box">
+    <div class="empty-cart-box" *ngIf="carItems.length === 0">
       <p class="empty-cart-text">O carrinho está vazio</p>
       <img src="../../assets/cart.png" />
+    </div>
+    <div *ngIf="carItems.length > 0">
+      <h1>Carrinho</h1>
+      <div class="cart-items">
+        <app-cart-item *ngFor="let item of carItems" [cartItem]="item" />
+      </div>
+      <div class="finish-cart">
+        <hr />
+        <div class="total-price-box">
+          <p class="total-price-text">Preço total:</p>
+          <p class="total-price-value">R$500.00</p>
+        </div>
+        <a><button>Finalizar Compra</button></a>
+      </div>
     </div>
   </section>
 </main>

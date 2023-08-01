@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output, EventEmitter, inject } from '@angular/core';
-import { ActivatedRoute, RouterModule, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Component, Output, EventEmitter, inject, Input } from '@angular/core';
+import { ActivatedRoute, Route, RouterModule } from '@angular/router';
+import { State } from 'src/app/Services/state.service';
+import { BaseComponent } from '../Base/base.component';
 
 @Component({
   selector: 'app-search',
@@ -10,21 +11,29 @@ import { Observable } from 'rxjs';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
 })
-export class SearchComponent {
-  inputValue: string = '';
+export class SearchComponent extends BaseComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  @Output() onChangeEvent = new EventEmitter<string>();
+  state: State = inject(State);
+  inputValue = '';
+  @Input() updateOnlyEnter = false;
+  @Output() onSearch = new EventEmitter<string>();
 
   setInputValue(value: string) {
-    this.onChangeEvent.emit(value);
-    this.inputValue = value;
+    if (this.updateOnlyEnter) {
+      this.inputValue = value;
+    } else this.state.setSearch(value);
   }
 
-  navigate(search: string) {
-    this.router.navigate(['/products'], { queryParams: { search } });
+  emitSearch() {
+    this.state.setSearch(this.inputValue);
+    this.onSearch.emit(this.inputValue);
   }
 
-  constructor(private router: Router) {
-    this.inputValue = this.route.snapshot.queryParamMap.get('search') ?? '';
+  constructor() {
+    super();
+
+    this.state.searchState
+      .pipe(this.unsubOnDestroy())
+      .subscribe((searchValue) => (this.inputValue = searchValue));
   }
 }
