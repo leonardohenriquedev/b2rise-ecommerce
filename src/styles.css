@@ -47,3 +47,17 @@ button {
 .secondary-bg-color {
   background-color: var(--secondary-bg-color);
 }
+
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(219, 219, 219);
+  border-radius: 5px;
+}
