@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { HeaderComponent } from '../Header/header.component';
-import { ProductService } from '../Services/products.service';
+import { Component } from '@angular/core';
+import { HeaderComponent } from 'src/app/Components/Header/header.component';
 
 @Component({
   selector: 'app-cart',
