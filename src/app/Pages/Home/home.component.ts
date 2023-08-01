@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SearchComponent } from '../Search/search.component';
+import { SearchComponent } from 'src/app/Components/Search/search.component';
 
 @Component({
   selector: 'app-home',

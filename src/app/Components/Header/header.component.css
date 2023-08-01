@@ -1,6 +1,6 @@
 header {
   display: flex;
-  position: absolute;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
