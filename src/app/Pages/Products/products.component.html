@@ -3,8 +3,13 @@
   <section>
     <div class="products-filters">
       <div class="result-filter">
-        <b class="search-input" *ngIf="searchInput">"{{ searchInput }}"</b>
-        <p class="total-results">{{ products.length }} resultados</p>
+        <b class="search-input" *ngIf="filters.search"
+          >"{{ filters.search }}"</b
+        >
+        <p class="total-results">
+          {{ products | async | filterProducts : filters | length }}
+          resultados
+        </p>
         <hr />
       </div>
 
@@ -35,12 +40,10 @@
       </div>
 
       <div class="products-items">
-        <!-- <app-product [product]="products[0]" />
-        <app-product [product]="products[1]" />
-        <app-product [product]="products[2]" /> -->
-
         <ol>
-          <li *ngFor="let product of products">
+          <li
+            *ngFor="let product of products | async | filterProducts : filters"
+          >
             <app-product [product]="product" />
           </li>
         </ol>
