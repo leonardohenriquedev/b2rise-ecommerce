@@ -2,7 +2,9 @@
   <input
     placeholder="Pequisar por produtos.."
     #searchInput
+    value="{{ inputValue }}"
     (input)="setInputValue(searchInput.value)"
+    (keydown.enter)="navigate(searchInput.value)"
   />
   <i class="bi bi-search"></i>
 </div>
