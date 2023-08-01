@@ -4,7 +4,7 @@
     #searchInput
     value="{{ inputValue }}"
     (input)="setInputValue(searchInput.value)"
-    (keydown.enter)="navigate(searchInput.value)"
+    (keydown.enter)="emitSearch()"
   />
-  <i class="bi bi-search"></i>
+  <i class="bi bi-search" (click)="emitSearch()"></i>
 </div>
