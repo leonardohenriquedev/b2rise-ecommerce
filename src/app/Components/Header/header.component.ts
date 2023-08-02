@@ -15,7 +15,7 @@ import { State } from 'src/app/Services/state.service';
 export class HeaderComponent extends BaseComponent {
   state: State = inject(State);
   searchInputValue = '';
-
+  totalCartItems: number = 0;
   navigate() {
     this.router.navigate(['/products'], {
       queryParams: { search: this.searchInputValue },
@@ -27,5 +27,15 @@ export class HeaderComponent extends BaseComponent {
     this.state.searchState
       .pipe(this.unsubOnDestroy())
       .subscribe((searchValue) => (this.searchInputValue = searchValue));
+
+    this.state.cartItemsState
+      .pipe(this.unsubOnDestroy())
+      .subscribe(
+        (cartItems) =>
+          (this.totalCartItems = cartItems.reduce(
+            (accumulator, cartItem) => accumulator + cartItem.quantity,
+            0
+          ))
+      );
   }
 }
