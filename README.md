@@ -4,6 +4,9 @@ Bem-vindo ao repositório do Desafio E-commerce da B2RISE! 😄
 
 Este projeto foi desenvolvido como um desafio técnico para a empresa B2RISE, utilizando Angular para construir um site de e-commerce funcional.
 
+## Deploy 🌍
+https://b2rise-ecommerce.vercel.app/
+
 ## Introdução 🎉
 
 O E-commerce B2RISE é uma plataforma de e-commerce baseada na web, desenvolvida utilizando o framework Angular. O objetivo é proporcionar aos usuários uma experiência de compra intuitiva e eficaz. Este projeto demonstra a implementação de funcionalidades essenciais de e-commerce, incluindo pesquisa de produtos, navegação de produtos, gerenciamento de carrinho, e processamento de pedidos.
