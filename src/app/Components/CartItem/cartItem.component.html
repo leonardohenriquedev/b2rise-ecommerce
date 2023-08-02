@@ -7,7 +7,11 @@
       {{ currencyHelper.formatToBRL(cartItem.product.price) }} / 1 und.
     </p>
     <div class="cart-item-buttons">
-      <a><button class="delete">Excluir</button></a>
+      <a
+        ><button class="delete" (click)="deleteFromCart(cartItem.product.id)">
+          Excluir
+        </button></a
+      >
       <a><button class="fav">Favoritar</button></a>
     </div>
     <p class="cart-item-description">

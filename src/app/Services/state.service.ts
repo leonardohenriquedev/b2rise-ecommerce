@@ -6,61 +6,7 @@ import { CartItem } from '../Types';
 export class State {
   private readonly search$: BehaviorSubject<string> = new BehaviorSubject('');
 
-  cartItems: CartItem[] = [
-    {
-      product: {
-        id: 1,
-        description: 'Camisa Verde',
-        longDescription:
-          'Camisa verde militar com detalhes em botões, uma opção estilosa e prática para o seu dia a dia. O verde militar é uma cor que nunca sai de moda. Disponível no tamanho: M.',
-        price: 119.75,
-      },
-      quantity: 1,
-    },
-    {
-      product: {
-        id: 2,
-        description: 'Camisa Verde',
-        longDescription:
-          'Camisa verde militar com detalhes em botões, uma opção estilosa e prática para o seu dia a dia. O verde militar é uma cor que nunca sai de moda. Disponível no tamanho: M.',
-        price: 119.75,
-      },
-      quantity: 1,
-    },
-
-    {
-      product: {
-        id: 3,
-        description: 'Camisa Verde',
-        longDescription:
-          'Camisa verde militar com detalhes em botões, uma opção estilosa e prática para o seu dia a dia. O verde militar é uma cor que nunca sai de moda. Disponível no tamanho: M.',
-        price: 119.75,
-      },
-      quantity: 1,
-    },
-
-    {
-      product: {
-        id: 4,
-        description: 'Camisa Verde',
-        longDescription:
-          'Camisa verde militar com detalhes em botões, uma opção estilosa e prática para o seu dia a dia. O verde militar é uma cor que nunca sai de moda. Disponível no tamanho: M.',
-        price: 119.75,
-      },
-      quantity: 1,
-    },
-
-    {
-      product: {
-        id: 5,
-        description: 'Camisa Verde',
-        longDescription:
-          'Camisa verde militar com detalhes em botões, uma opção estilosa e prática para o seu dia a dia. O verde militar é uma cor que nunca sai de moda. Disponível no tamanho: M.',
-        price: 119.75,
-      },
-      quantity: 1,
-    },
-  ];
+  cartItems: CartItem[] = [];
   private cartItems$: BehaviorSubject<CartItem[]> = new BehaviorSubject(
     this.cartItems
   );
@@ -97,6 +43,19 @@ export class State {
         quantity: this.cartItems[index].quantity - 1,
       };
     }
+    this.cartItems$.next(this.cartItems);
+  }
+
+  deleteFromCart(id: number) {
+    this.cartItems = this.cartItems.filter(
+      (cartItem) => cartItem.product.id !== id
+    );
+
+    this.cartItems$.next(this.cartItems);
+  }
+
+  clearCart() {
+    this.cartItems = [];
     this.cartItems$.next(this.cartItems);
   }
 

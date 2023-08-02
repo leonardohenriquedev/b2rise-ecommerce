@@ -4,8 +4,11 @@
   </a>
   <app-search [updateOnlyEnter]="true" (onSearch)="navigate()" />
   <div class="header-icons">
-    <a [routerLink]="'/cart'">
+    <a [routerLink]="'/cart'" class="cart-icon">
       <i class="bi bi-cart-fill"></i>
+      <div class="total-items" *ngIf="totalCartItems > 0">
+        {{ totalCartItems }}
+      </div>
     </a>
 
     <a [routerLink]="'/historic'">

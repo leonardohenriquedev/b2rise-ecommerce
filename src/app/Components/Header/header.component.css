@@ -23,3 +23,21 @@ i {
   width: 120px;
   justify-content: space-between;
 }
+
+.cart-icon {
+  display: flex;
+}
+
+.total-items {
+  display: flex;
+  position: relative;
+  /* font-size: 18px; */
+  right: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
+  color: #fff;
+}

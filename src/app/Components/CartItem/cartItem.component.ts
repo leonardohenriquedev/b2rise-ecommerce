@@ -26,6 +26,10 @@ export class CartItemComponent extends BaseComponent {
     this.state.removeCartItem(id);
   }
 
+  deleteFromCart(id: number) {
+    this.state.deleteFromCart(id);
+  }
+
   constructor() {
     super();
   }

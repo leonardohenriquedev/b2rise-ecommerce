@@ -14,9 +14,11 @@
         <hr />
         <div class="total-price-box">
           <p class="total-price-text">Preço total:</p>
-          <p class="total-price-value">R$500.00</p>
+          <p class="total-price-value">
+            {{ currencyHelper.formatToBRL(total) }}
+          </p>
         </div>
-        <a><button>Finalizar Compra</button></a>
+        <a><button (click)="finishCart()">Finalizar Compra</button></a>
       </div>
     </div>
   </section>
