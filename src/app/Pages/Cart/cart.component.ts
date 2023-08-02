@@ -20,6 +20,11 @@ export class CartComponent extends BaseComponent {
   carItems: CartItem[] = [];
   total: number = 0;
 
+  finishCart() {
+    this.state.clearCart();
+    alert(`Compra finalizada com sucesso!`);
+  }
+
   constructor() {
     super();
 

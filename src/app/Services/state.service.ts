@@ -54,6 +54,11 @@ export class State {
     this.cartItems$.next(this.cartItems);
   }
 
+  clearCart() {
+    this.cartItems = [];
+    this.cartItems$.next(this.cartItems);
+  }
+
   get searchState() {
     return this.search$.asObservable();
   }
