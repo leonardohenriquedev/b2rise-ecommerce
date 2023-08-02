@@ -35,7 +35,7 @@ Para executar este projeto localmente, siga estas etapas:
 
 ## Uso 📝
 
-- Acesse a página inicial para navegar e pesquisar produtos.
+- Acesse a página inicial para navegar e pesquisar produtos (Pesquise por cores como por ex.: Preto, Branco, Rosa, Laranja, Roxo..).
 
 - Escolha os produtos que mais combinam com você 😍.
 
