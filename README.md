@@ -1,59 +1,47 @@
-# 🚀 Frontend challenge
+# Desafio | E-commerce B2RISE 💻🛒
 
-Bem-vindo(a) ao desafio frontend!
+Bem-vindo ao repositório do Desafio E-commerce da B2RISE! 😄
 
-O objetivo deste desafio é avaliar suas habilidades de programação.
-Quando sua solução estiver pronta, basta responder o e-mail que recebeu com o link do seu repo no Github!
-Em seguida, enviaremos o feedback e as instruções dos próximos passos!
+Este projeto foi desenvolvido como um desafio técnico para a empresa B2RISE, utilizando Angular para construir um site de e-commerce funcional.
 
-Caso tenha alguma dúvida, nós estamos disponíveis no email *recrutamento@b2rise.consulting*.
-Bom desafio!
+## Introdução 🎉
 
-> ⚠️ **É importante que o seu repo seja público, caso contrário não iremos conseguir avaliar sua resposta. Se você preferir, pode criar um repositório privado com acesso para os usuários** `mlucascardoso` e `notelho`.
+O E-commerce B2RISE é uma plataforma de e-commerce baseada na web, desenvolvida utilizando o framework Angular. O objetivo é proporcionar aos usuários uma experiência de compra intuitiva e eficaz. Este projeto demonstra a implementação de funcionalidades essenciais de e-commerce, incluindo pesquisa de produtos, navegação de produtos, gerenciamento de carrinho, e processamento de pedidos.
 
-# 🧠 Contexto
+## Tecnologias 🚀
 
-O desafio será implementar um e-commerce para venda de camisetas que deverá ter as seguintes funcionalidades:
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-- [ ] Listagem dos produtos
-- [ ] Adicionar e remover produtos do carrinho
-- [ ] Finalizar compra
+- Angular
 
-Caso você queira ir além:
+- Typescript
 
-- [ ] Histórico de pedidos
-- [ ] Busca por nome do produto
+- Json Server
 
-## 📋 Instruções
+- ...
 
-Chegou a hora de colocar a mão na massa!
+## Instalação 📦
 
-- Siga [esse protótipo](https://www.figma.com/proto/SQHTonDPYDbpkxncjDfTbK/Frontend-challange)
-- Utilize HTML, CSS e Typescript
-- Utilize o framework Angular (>= v7)
-- Local storage para salvar o histórico de pedidos
-- Por favor, inclua no README as instruções de instalação do projeto
-- Sinta-se livre para incluir quaisquer observações
-- Consuma os dados dos produtos que estão no arquivo **api/products.json** (você pode criar um [JSON server](https://www.npmjs.com/package/json-server) ou mockar no código)
+Para executar este projeto localmente, siga estas etapas:
 
-## ✔️ Critérios de Avaliação
+1. Clone o repositório: `git clone https://github.com/leonardohenriquedev/b2rise-ecommerce`
 
-Além dos requisitos levantados acima, iremos olhar para os seguintes critérios durante a correção do desafio:
+2. Instale as dependências: `npm install`
 
-- UI/UX
-- Codificação
-- Componentização
-- Padrão de commits [Conventional](https://www.conventionalcommits.org/en/v1.0.0/)
+3. Inicie o projeto: `npm run start`
 
-## 😎 Seria legal se você utilizasse
+## Uso 📝
 
-- Sass, Less
-- Boostrap, Bulma, Materialize
-- Arquitetura limpa
-- Princípios de clean code
-- Testes unitários
-- Testes e2e
+- Acesse a página inicial para navegar e pesquisar produtos.
 
----
+- Escolha os produtos que mais combinam com você 😍.
 
-_O desafio acima foi cuidadosamente construído para propósitos de avaliação apenas. Já possuímos uma ferramenta similar na nossa plataforma._
+- Adicione os produtos ao carrinho e ajuste as quantidades conforme necessário.
+
+- Finalize a compra.
+
+**Atenção**: Algumas funcionalidades como: filtro por cor e tamanho, selecionar todos, adicionar todos ao carrinho, produtos favoritos e histórico de pedidos ainda nao foram implementados.
+
+Agradeço por conferir o Desafio E-commerce B2RISE! Se tiver dúvidas ou feedback, não hesite em entrar em contato ou abrir uma issue neste repositório. Até mais! 🚀👨‍💻
+
+**Este Readme foi feito com auxilio da tecnologia gpt-3. 🤖**
