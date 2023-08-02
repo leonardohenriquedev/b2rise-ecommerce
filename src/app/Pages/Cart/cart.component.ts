@@ -5,6 +5,7 @@ import { CartItemComponent } from 'src/app/Components/CartItem/cartItem.componen
 import { HeaderComponent } from 'src/app/Components/Header/header.component';
 import { State } from 'src/app/Services/state.service';
 import { CartItem } from 'src/app/Types';
+import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 
 @Component({
   selector: 'app-cart',
@@ -15,14 +16,24 @@ import { CartItem } from 'src/app/Types';
 })
 export class CartComponent extends BaseComponent {
   state: State = inject(State);
+  currencyHelper: CurrencyHelper = inject(CurrencyHelper);
   carItems: CartItem[] = [];
+  total: number = 0;
 
   constructor() {
     super();
 
     this.state.cartItemsState
       .pipe(this.unsubOnDestroy())
-      .subscribe((cartItems) => (this.carItems = [...cartItems]));
+      .subscribe((cartItems) => {
+        this.carItems = [...cartItems];
+
+        this.total = cartItems.reduce(
+          (accumulator, cartItem) =>
+            accumulator + cartItem.product.price * cartItem.quantity,
+          0
+        );
+      });
   }
 
   ngOnInit() {
