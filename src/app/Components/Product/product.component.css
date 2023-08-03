@@ -5,6 +5,10 @@
   height: 200px;
   margin-top: 20px;
 }
+img {
+  object-fit: contain;
+  width: 30%;
+}
 
 .first-box {
   display: flex;
@@ -30,9 +34,6 @@ input {
 
 .product-price {
   font-size: 20px;
-}
-
-.product-description {
 }
 
 hr {

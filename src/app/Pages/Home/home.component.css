@@ -6,22 +6,25 @@ main {
   height: 100vh;
 }
 
+section {
+  margin-top: 0;
+}
+
 .home-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 32vh;
 }
 
 img {
   min-width: 500px;
+  margin-bottom: 20px;
   width: 30vw;
 }
 
 .home-buttons {
   margin-top: 20px;
-  width: 36vw;
   display: flex;
   justify-content: space-evenly;
 }
@@ -29,7 +32,8 @@ img {
 button {
   color: #fff;
   font-size: 25px;
-  width: 270px;
+  margin: 20px;
+  width: 15vw;
   height: 50px;
   border: none;
   border-radius: 10px;
