@@ -4,7 +4,7 @@
   <div class="cart-item-info">
     <b class="cart-item-title">{{ cartItem.product.description }}</b>
     <p class="cart-item-price">
-      {{ currencyHelper.formatToBRL(cartItem.product.price) }} / 1 und.
+      {{ cartItem.product.price | currency : "BRL" : "symbol" }} / 1 und.
     </p>
     <div class="cart-item-buttons">
       <a
@@ -43,7 +43,7 @@
 
     <p>
       {{
-        currencyHelper.formatToBRL(cartItem.product.price * cartItem.quantity)
+        cartItem.product.price * cartItem.quantity | currency : "BRL" : "symbol"
       }}
     </p>
   </div>

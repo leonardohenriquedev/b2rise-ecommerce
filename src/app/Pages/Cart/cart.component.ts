@@ -5,7 +5,6 @@ import { CartItemComponent } from 'src/app/Components/CartItem/cartItem.componen
 import { HeaderComponent } from 'src/app/Components/Header/header.component';
 import { State } from 'src/app/Services/state.service';
 import { CartItem } from 'src/app/Types';
-import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +15,6 @@ import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 })
 export class CartComponent extends BaseComponent {
   state: State = inject(State);
-  currencyHelper: CurrencyHelper = inject(CurrencyHelper);
   carItems: CartItem[] = [];
   total: number = 0;
 

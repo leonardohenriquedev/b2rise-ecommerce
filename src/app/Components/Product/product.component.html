@@ -5,7 +5,7 @@
     <div class="product-info">
       <b class="product-title">{{ product.description }}</b>
       <p class="product-price">
-        {{ currencyHelper.formatToBRL(product.price) }} / 1 und.
+        {{ product.price | currency : "BRL" : "symbol" }}/ 1 und.
       </p>
       <p class="product-description">
         {{ product.longDescription }}
