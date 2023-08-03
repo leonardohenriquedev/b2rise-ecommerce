@@ -5,7 +5,7 @@
       <p class="empty-cart-text">O carrinho está vazio</p>
       <img src="../../assets/cart.png" />
     </div>
-    <div *ngIf="carItems.length > 0">
+    <div *ngIf="carItems.length > 0" class="cart">
       <h1>Carrinho</h1>
       <div class="cart-items">
         <app-cart-item *ngFor="let item of carItems" [cartItem]="item" />
