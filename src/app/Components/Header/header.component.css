@@ -31,7 +31,6 @@ i {
 .total-items {
   display: flex;
   position: relative;
-  /* font-size: 18px; */
   right: 10px;
   justify-content: center;
   align-items: center;
