@@ -35,7 +35,6 @@ img {
 }
 
 .cart-item-buttons {
-  /* border: 1px solid black; */
   display: flex;
   width: 22%;
   justify-content: space-between;

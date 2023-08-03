@@ -15,7 +15,7 @@
         <div class="total-price-box">
           <p class="total-price-text">Preço total:</p>
           <p class="total-price-value">
-            {{ currencyHelper.formatToBRL(total) }}
+            {{ total | currency : "BRL" : "symbol" }}
           </p>
         </div>
         <a><button (click)="finishCart()">Finalizar Compra</button></a>

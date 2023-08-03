@@ -4,7 +4,6 @@ import { RouterLink } from '@angular/router';
 import { CartItem, Product } from 'src/app/Types';
 import { BaseComponent } from '../Base/base.component';
 import { State } from 'src/app/Services/state.service';
-import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 
 @Component({
   selector: 'app-cart-item',
@@ -16,7 +15,6 @@ import { CurrencyHelper } from 'src/app/Utils/formatToBRL';
 export class CartItemComponent extends BaseComponent {
   @Input() cartItem!: CartItem;
   state: State = inject(State);
-  currencyHelper: CurrencyHelper = inject(CurrencyHelper);
 
   addToCart(cartItem: Product) {
     this.state.addCartItem({ product: cartItem, quantity: 1 });
